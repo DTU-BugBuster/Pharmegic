@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".PocketYoga.ImageResultActivity"></activity>
+        <activity android:name=".PocketYoga.UploadAsanActivity" />
+        <activity android:name=".PocketYoga.ChooseYogaActivity" />
+        <activity android:name=".PocketYoga.MonitorAct" />
+        <activity android:name=".PocketYoga.LeaderBoardActivity" />
+        <activity android:name=".PocketYoga.YogaMainActivity" />
+        <activity android:name=".PocketYoga.StartupActivity" />
         <activity android:name=".BoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,8 +33,7 @@
         <activity android:name=".Auth.SignupActivity" />
         <activity android:name=".Auth.BaseActivity" />
         <activity android:name=".Auth.PhoneAuthActivity" />
-        <activity android:name=".Auth.AnonymousActivity" />
-        <!-- <activity android:name=".Auth.FacebookLoginActivity" /> -->
+        <activity android:name=".Auth.AnonymousActivity" /> <!-- <activity android:name=".Auth.FacebookLoginActivity" /> -->
         <activity android:name=".Music.MusicActivity" />
         <activity android:name=".SpaceWars.Spacewar" />
         <activity android:name=".Maps.MapsActivity" />
@@ -40,7 +46,6 @@
         <activity android:name=".Meme.MemeActivity" />
         <activity android:name=".ChatApp.AnonymousChat" />
         <activity android:name=".PaytmActivity" />
-        <activity android:name=".PaytmActivity"></activity>
     </application>
 
 </manifest>

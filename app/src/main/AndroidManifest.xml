@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SmartDetectorActivity"></activity>
+        <activity android:name=".YogaDietSolutions.YogaSolutionsMainActivity"></activity>
+        <activity android:name=".YogaDietSolutions.YogaKneePain" />
+        <activity android:name=".YogaDietSolutions.YogaShoulderPain" />
+        <activity android:name=".YogaDietSolutions.YogaBackPain" />
+        <activity android:name=".YogaDietSolutions.YogaWeightLoss" />
+        <activity android:name=".SmartDetectorActivity" />
         <activity android:name=".ChoiceActivity" />
         <activity android:name=".PocketYoga.ImageResultActivity" />
         <activity android:name=".PocketYoga.UploadAsanActivity" />

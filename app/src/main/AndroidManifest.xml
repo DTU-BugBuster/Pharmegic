@@ -9,13 +9,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".BoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".MenuScreen" />
+        <activity android:name=".Auth.LoginActivity" />
+        <activity android:name=".Auth.DifferentAuth" />
+        <activity android:name=".Auth.GoogleSignInActivity" />
+        <activity android:name=".Auth.PasswordlessActivity" />
+        <activity android:name=".Auth.SignupActivity" />
+        <activity android:name=".Auth.BaseActivity" />
+        <activity android:name=".Auth.PhoneAuthActivity" />
+        <activity android:name=".Auth.AnonymousActivity" />
+        <!-- <activity android:name=".Auth.FacebookLoginActivity" /> -->
+        <activity android:name=".Music.MusicActivity" />
+        <activity android:name=".SpaceWars.Spacewar" />
+        <activity android:name=".Maps.MapsActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity android:name=".Chatbot.ChatActivity" />
+        <activity android:name=".Meme.MemeActivity" />
+        <activity android:name=".ChatApp.AnonymousChat" />
+        <activity android:name=".PaytmActivity" />
+        <activity android:name=".PaytmActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,149 @@
+<!--<com.mxn.soul.flowingdrawer_core.FlowingDrawer xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/drawerlayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:clipChildren="false"-->
+    <!--android:clipToPadding="false"-->
+    <!--app:edPosition="1"-->
+    <!--tools:context=".MenuScreen"-->
+    <!--app:edMenuSize="260dp"-->
+    <!--app:edMenuBackground="#dddddd">-->
+
+    <!--<android.support.design.widget.AppBarLayout android:id="@+id/appBarLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--&gt;-->
+    <!--<include-->
+    <!--android:id="@+id/toolbar"-->
+    <!--layout="@layout/view_feed_toolbar"/>-->
+    <!--</android.support.design.widget.AppBarLayout>-->
+
+
+    <!--<com.mxn.soul.flowingdrawer_core.FlowingMenuLayout-->
+        <!--android:id="@+id/menulayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<FrameLayout-->
+            <!--android:id="@+id/id_container_menu"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"/>-->
+
+    <!--</com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>-->
+
+
+<FrameLayout android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFD700"
+   android:id="@+id/root"
+    android:orientation="vertical"
+    tools:context=".MenuScreen"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+        <View
+            android:layout_gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/guillotine_actionbar_background_view_height"
+            android:background="#ff56d0ff"/>
+            <!--android:background="@color/guillotine_background"-->
+            <!--/>-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:contentInsetStart="0dp"
+            android:background="#D3D3D3"
+            style="@style/Toolbar">
+
+            <ImageView
+                android:id="@+id/content_hamburger"
+                style="@style/ImageView.Hamburger"
+                android:contentDescription="0"
+                android:src="@drawable/nav_ham"/>
+            <!--android:src="@drawable/ic_menu_90"-->
+                <!--android:contentDescription="0" />-->
+
+            <com.example.android.myapplication.Widget.CanaroTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/activity"
+                android:textSize="@dimen/guillotine_item_text_size" />
+        </android.support.v7.widget.Toolbar>
+
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/root"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/guillotine_background_dark"-->
+        <!--android:orientation="vertical">-->
+     <!---->
+
+
+<!--</FrameLayout>-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+        <!--<ImageView-->
+            <!--android:layout_width="382dp"-->
+            <!--android:layout_height="432dp"-->
+            <!--android:src="@drawable/logo_final"/>-->
+
+        <me.itangqi.waveloadingview.WaveLoadingView
+            android:id="@+id/waveLoadingView"
+            android:layout_width="382dp"
+            android:layout_height="432dp"
+            app:wlv_borderWidth="0dp"
+            app:wlv_progressValue="30"
+            app:wlv_shapeType="square"
+            app:wlv_borderColor="@color/colorPrimary"
+            app:wlv_round_rectangle="true"
+            app:wlv_triangle_direction="north"
+            app:wlv_titleCenterStrokeColor="@android:color/holo_blue_dark"
+            app:wlv_titleCenterStrokeWidth="0dp"
+            app:wlv_titleCenter=""
+            app:wlv_titleCenterColor="@android:color/white"
+            app:wlv_titleCenterSize="24sp"
+            app:wlv_waveAmplitude="70"
+            app:wlv_waveColor="@color/colorAccent"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/the"
+            android:layout_gravity="center_horizontal|top" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            android:gravity="right|bottom"
+            android:orientation="vertical"
+            android:paddingTop="2dp"
+            tools:ignore="RtlHardcoded">
+
+            <com.nightonke.boommenu.BoomMenuButton
+                android:id="@+id/bmb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bmb_buttonEnum="ham"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal|bottom"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+<!--</com.mxn.soul.flowingdrawer_core.FlowingDrawer>-->
+

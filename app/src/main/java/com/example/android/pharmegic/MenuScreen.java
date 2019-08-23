@@ -201,11 +201,12 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onBackPressed() {
-        if (mDrawer.isMenuVisible()) {
+        if (mDrawer != null && mDrawer.isMenuVisible()) {
             mDrawer.closeMenu();
 
         } else {
-            super.onBackPressed();
+            startActivity(new Intent(getBaseContext(),ChoiceActivity.class));
+            finish();
         }
     }
     /*  public  void in()

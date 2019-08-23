@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.android.pharmegic.ChoiceActivity;
 import com.example.android.pharmegic.MenuScreen;
 import com.example.android.pharmegic.R;
 import com.google.android.gms.auth.api.Auth;
@@ -72,8 +73,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void updateUI(FirebaseUser currentUser){
-        Toast.makeText(this, "Welcome " + currentUser.getDisplayName(), Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getBaseContext(), MenuScreen.class));
+        Toast.makeText(this, "Welcome " + currentUser.getEmail(), Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getBaseContext(), ChoiceActivity.class));
         finish();
     }
 

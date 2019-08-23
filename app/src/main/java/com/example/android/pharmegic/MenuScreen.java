@@ -50,21 +50,21 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
     private WebView chatWindow;
 
     static int[] imageResources = new int[]{
-            R.drawable.emotion,
-            R.drawable.music_player,
-            R.drawable.robot,
+//            R.drawable.emotion,
+//            R.drawable.music_player,
+//            R.drawable.robot,
             R.drawable.project,
-            R.drawable.clown,
+//            R.drawable.clown,
 
 
 
     };
     static int[] Strings = new int[]{
-            R.string.voice,
-            R.string.news,
-            R.string.weather,
+//            R.string.voice,
+//            R.string.news,
+//            R.string.weather,
             R.string.forum,
-            R.string.buy,
+//            R.string.buy,
     };
 
     private FlowingDrawer mDrawer;
@@ -121,22 +121,22 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
         // Toast.makeText(this, currentDateTimeString, Toast.LENGTH_LONG).show();;
 
 //        mDrawer = (FlowingDrawer) findViewById(R.id.drawerlayout);
-        WaveLoadingView mWaveLoadingView = (WaveLoadingView) findViewById(R.id.waveLoadingView);
-        mWaveLoadingView.setShapeType(WaveLoadingView.ShapeType.CIRCLE);
-
-        mWaveLoadingView.setCenterTitleColor(Color.GRAY);
-        mWaveLoadingView.setBottomTitleSize(18);
-        mWaveLoadingView.setProgressValue(20);
-        mWaveLoadingView.setBorderWidth(0);
-        mWaveLoadingView.setAmplitudeRatio(60);
-        mWaveLoadingView.setWaveColor(Color.parseColor("#ff64c2f4"));
-        mWaveLoadingView.setTopTitleStrokeColor(Color.parseColor("#ff1ca8f4"));
-        mWaveLoadingView.setTopTitleStrokeWidth(3);
-        mWaveLoadingView.setAnimDuration(6000);
-        mWaveLoadingView.pauseAnimation();
-        mWaveLoadingView.resumeAnimation();
-        mWaveLoadingView.cancelAnimation();
-        mWaveLoadingView.startAnimation();
+//        WaveLoadingView mWaveLoadingView = (WaveLoadingView) findViewById(R.id.waveLoadingView);
+//        mWaveLoadingView.setShapeType(WaveLoadingView.ShapeType.CIRCLE);
+//
+//        mWaveLoadingView.setCenterTitleColor(Color.GRAY);
+//        mWaveLoadingView.setBottomTitleSize(18);
+//        mWaveLoadingView.setProgressValue(20);
+//        mWaveLoadingView.setBorderWidth(0);
+//        mWaveLoadingView.setAmplitudeRatio(60);
+//        mWaveLoadingView.setWaveColor(Color.parseColor("#ff64c2f4"));
+//        mWaveLoadingView.setTopTitleStrokeColor(Color.parseColor("#ff1ca8f4"));
+//        mWaveLoadingView.setTopTitleStrokeWidth(3);
+//        mWaveLoadingView.setAnimDuration(6000);
+//        mWaveLoadingView.pauseAnimation();
+//        mWaveLoadingView.resumeAnimation();
+//        mWaveLoadingView.cancelAnimation();
+//        mWaveLoadingView.startAnimation();
 
         bmb();
 
@@ -201,11 +201,12 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onBackPressed() {
-        if (mDrawer.isMenuVisible()) {
+        if (mDrawer != null && mDrawer.isMenuVisible()) {
             mDrawer.closeMenu();
 
         } else {
-            super.onBackPressed();
+            startActivity(new Intent(getBaseContext(),ChoiceActivity.class));
+            finish();
         }
     }
     /*  public  void in()
@@ -234,8 +235,8 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
     {
         BoomMenuButton bmb = (BoomMenuButton) findViewById(R.id.bmb);
         bmb.setButtonEnum(ButtonEnum.Ham);
-        bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_5);
-        bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_5);
+        bmb.setPiecePlaceEnum(PiecePlaceEnum.HAM_1);
+        bmb.setButtonPlaceEnum(ButtonPlaceEnum.HAM_1);
         for (int i = 0; i < bmb.getPiecePlaceEnum().pieceNumber(); i++) {
             HamButton.Builder builder = new HamButton.Builder()
                     .normalTextRes(getString())
@@ -243,26 +244,18 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
                         @Override
                         public void onBoomButtonClick(int index) {
 
-
                             if (index == 0) {
-                                start(index);
+                                sales(index);
 
                             }
                             if (index == 1) {
-                                ordering(index);
-                            }
-                            if (index == 2) {
-                                stock(index);
-
-                            }
-                            if (index == 3) {
                                 sales(index);
                             }
                             if (index == 4) {
-                                buy(index);
+                                anonymous(index);
                             }
-                            if(index == 5)
-                            { anonymous(index);
+                            if(index == 5){
+                                anonymous(index);
                             }
                         }
 
@@ -271,6 +264,7 @@ public class MenuScreen extends AppCompatActivity implements View.OnClickListene
 
                     .normalImageRes(getImageResource());
             bmb.addBuilder(builder);
+
         }
     }
     public static int getString() {

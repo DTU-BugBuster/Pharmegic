@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SpaceWars.Spacewar"
     android:background="@color/grey">
 
-    <com.example.android.myapplication.SpaceWars.Spaceship
+    <com.example.android.pharmegic.SpaceWars.Spaceship
         android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="380dp"

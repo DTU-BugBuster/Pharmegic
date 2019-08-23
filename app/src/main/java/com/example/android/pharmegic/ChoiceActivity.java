@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.android.pharmegic.PocketYoga.YogaMainActivity;
+
 public class ChoiceActivity extends AppCompatActivity {
 
     private Button btnMind, btnPhysical;
@@ -24,6 +26,11 @@ public class ChoiceActivity extends AppCompatActivity {
                 startActivity(new Intent(getBaseContext(),MenuScreen.class));
             }
         });
-
+        btnPhysical.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getBaseContext(), YogaMainActivity.class));
+            }
+        });
     }
 }

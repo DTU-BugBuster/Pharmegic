@@ -330,7 +330,7 @@ class SongPlayingFragment : Fragment() {
             Staticated.onSongComplete()
         }
         clickHandler()
-        var visualizationHandler = DbmHandler.Factory.newVisualizerHandler(Statified.myActivity as Context, 0)
+        val visualizationHandler = DbmHandler.Factory.newVisualizerHandler(Statified.myActivity as Context, 0)
         Statified.audioVisualization?.linkTo(visualizationHandler)
 
         var prefsForShuffle = Statified.myActivity?.getSharedPreferences(Staticated.MY_PREFS_SHUFFLE, Context.MODE_PRIVATE)

@@ -31,11 +31,11 @@ public class ChooseYogaActivity extends AppCompatActivity {
         fab = findViewById(R.id.bt_add_pic);
         recyclerView = findViewById(R.id.rv);
         adapter = new ChooseYogaAdapter(name, image, desc, this);
-        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, true);
+        layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         ViewCompat.setNestedScrollingEnabled(recyclerView, false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-        recyclerView.setHasFixedSize(true);
+//        recyclerView.setHasFixedSize(true);
         fab.setOnClickListener(someview -> {
             Intent i = new Intent(this, UploadAsanActivity.class);
             startActivity(i);

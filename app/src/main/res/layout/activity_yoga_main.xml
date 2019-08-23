@@ -10,7 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/llPractise"
+        >
 
         <ImageView
             android:layout_width="200dp"
@@ -20,8 +22,9 @@
             android:src="@drawable/lotus_position" />
 
         <Button
+            android:id="@+id/btnPractise"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
             android:fontFamily="@font/economica"
@@ -41,7 +44,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/llLeaderboard"
+        >
 
         <ImageView
             android:layout_width="200dp"
@@ -59,7 +64,9 @@
             android:fontFamily="@font/economica"
             android:text="Leaderboard"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:id="@+id/btnLeaderboard"
+            />
         <ImageButton
             android:id="@+id/bt_monitor"
             android:layout_width="wrap_content"
@@ -72,7 +79,9 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:id="@+id/llProgress"
+        >
 
         <ImageView
             android:layout_width="200dp"
@@ -90,7 +99,9 @@
             android:fontFamily="@font/economica"
             android:text="Progress"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:id="@+id/btnProgress"
+            />
         <ImageButton
             android:id="@+id/button"
             android:layout_width="wrap_content"

@@ -1,24 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<ScrollView-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_width="match_parent"-->
-    <!--&gt;-->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:scrollbars="vertical"
     >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/llBodyWeight"
+        >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="165dp"
+            android:layout_gravity="left"
+            android:background="@android:color/transparent"
+            android:padding="20dp"
+            android:src="@drawable/weight_loss" />
+
+        <Button
+            android:id="@+id/btnWeightloss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/economica2"
+            android:text="Weight Loss"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_keyboard_arrow_right_black_36dp2"/>
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="horizontal"
-        android:id="@+id/llPractise"
+        android:id="@+id/llknee"
         >
 
         <ImageView
@@ -26,33 +53,36 @@
             android:layout_height="175dp"
             android:background="@android:color/transparent"
             android:padding="20dp"
-            android:src="@drawable/lotus_position" />
+            android:src="@drawable/knee"
+            />
 
         <Button
-            android:id="@+id/btnPractise"
+            android:id="@+id/btnKnee"
             android:layout_width="wrap_content"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/economica"
-            android:text="Practice"
+            android:fontFamily="@font/economica2"
+            android:text="Knee Pain"
             android:textSize="22sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            />
         <ImageButton
             android:id="@+id/bt_acc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_keyboard_arrow_right_black_36dp"/>
+            android:src="@drawable/ic_keyboard_arrow_right_black_36dp2"/>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:id="@+id/llLeaderboard"
+        android:layout_marginTop="20dp"
+        android:id="@+id/llshoulder"
         >
 
         <ImageView
@@ -61,33 +91,33 @@
             android:layout_gravity="left"
             android:background="@android:color/transparent"
             android:padding="20dp"
-            android:src="@drawable/trophy" />
+            android:src="@drawable/shoulder_pain" />
 
         <Button
+            android:id="@+id/btnShoulder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/economica"
-            android:text="Leaderboard"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:id="@+id/btnLeaderboard"
-            />
+            android:fontFamily="@font/economica2"
+            android:text="Shoulder Pain"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <ImageButton
-            android:id="@+id/bt_monitor"
+            android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_keyboard_arrow_right_black_36dp"/>
+            android:src="@drawable/ic_keyboard_arrow_right_black_36dp2"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/llProgress"
+        android:layout_marginTop="20dp"
+        android:id="@+id/llback"
         >
 
         <ImageView
@@ -96,61 +126,25 @@
             android:layout_gravity="left"
             android:background="@android:color/transparent"
             android:padding="20dp"
-            android:src="@drawable/growth" />
+            android:src="@drawable/back_pain" />
 
         <Button
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:fontFamily="@font/economica"
-            android:text="Progress"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:id="@+id/btnProgress"
-            />
+            android:fontFamily="@font/economica2"
+            android:text="Back Pain"
+            android:textSize="20sp"
+            android:textStyle="bold" />
         <ImageButton
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_keyboard_arrow_right_black_36dp"/>
+            android:src="@drawable/ic_keyboard_arrow_right_black_36dp2"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:id="@+id/llYogaSolutions"
-        >
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="165dp"
-            android:layout_gravity="left"
-            android:background="@android:color/transparent"
-            android:padding="20dp"
-            android:src="@drawable/yoga" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/economica"
-            android:text="Yoga"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:id="@+id/btnYogaSolutions"
-            />
-        <ImageButton
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_keyboard_arrow_right_black_36dp"/>
-    </LinearLayout>
 </LinearLayout>
-<!--</ScrollView>-->

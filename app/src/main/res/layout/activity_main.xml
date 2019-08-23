@@ -109,7 +109,7 @@
 
     </LinearLayout>
 
-    <com.example.android.myapplication.PlayPauseButton
+    <com.example.android.pharmegic.PlayPauseButton
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"

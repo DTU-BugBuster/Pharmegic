@@ -16,7 +16,7 @@ import android.widget.TextView
 import com.ToxicBakery.viewpager.transforms.*
 import com.example.android.pharmegic.R
 
-class MemeActivity : AppCompatActivity() {
+class MemeActivity  : AppCompatActivity() {
 
     private var selectedClassIndex: Int = 0
     private lateinit var pager: ViewPager
@@ -65,7 +65,7 @@ class MemeActivity : AppCompatActivity() {
         pager.setPageTransformer(true, TRANSFORM_CLASSES[position].clazz.newInstance())
     }
 
-    class PlaceholderFragment : Fragment() {
+    class PlaceholderFragment : android.app.Fragment() {
 
         override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
             val position = arguments!!.getInt(EXTRA_POSITION)
@@ -92,7 +92,7 @@ class MemeActivity : AppCompatActivity() {
     private class PageAdapter internal constructor(fragmentManager: FragmentManager) : FragmentStatePagerAdapter(fragmentManager) {
 
         override fun getItem(position: Int): Fragment =
-                PlaceholderFragment.newInstance(position + 1)
+                Fragment();
 
         override fun getCount(): Int {
             return 5

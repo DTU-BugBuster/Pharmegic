@@ -31,7 +31,7 @@ class MusicActivity : AppCompatActivity() {
     var navigationDrawerIconsList: ArrayList<String> = arrayListOf()
     var images_for_navdrawer = intArrayOf(R.drawable.navigation_allsongs, R.drawable.navigation_favorites,
             R.drawable.navigation_settings, R.drawable.navigation_aboutus)
-    var trackNotificationBuilder: Notification?=null
+    var trackNotificationBuilder: Notification? = null
 
 
     var permissionsString = arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE,
@@ -40,9 +40,9 @@ class MusicActivity : AppCompatActivity() {
             Manifest.permission.PROCESS_OUTGOING_CALLS,
             Manifest.permission.RECORD_AUDIO)
 
-    object Statified{
-        var drawerLayout : DrawerLayout?=null
-        var notificationManager: NotificationManager?=null
+    object Statified {
+        var drawerLayout: DrawerLayout? = null
+        var notificationManager: NotificationManager? = null
     }
 
     @RequiresApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -139,13 +139,22 @@ class MusicActivity : AppCompatActivity() {
                         && grantResults[3] == PackageManager.PERMISSION_GRANTED
                         && grantResults[4] == PackageManager.PERMISSION_GRANTED) {
                     Handler().postDelayed({
-                        val startAct = Intent(this@MusicActivity, MainActivity::class.java)
-                        startActivity(startAct)
-                        this.finish()
+                        //                        val startAct = Intent(this@MusicActivity, MainActivity::class.java)
+//                        startActivity(startAct)
+//                        this.finish()
                     }, 2000)
                 } else {
-                    Toast.makeText(this@MusicActivity, "Please grant all permissions!", Toast.LENGTH_SHORT).show()
-                    this.finish()
+                    if (!hasPermissions(this@MusicActivity, *permissionsString)) {
+                        //we have to ask for permissions
+                        ActivityCompat.requestPermissions(this@MusicActivity, permissionsString, 131)
+                    }
+
+//                    val startAct = Intent(this@MusicActivity, MainActivity::class.java)
+//                    startActivity(startAct)
+//                    this.finish()
+
+//                    Toast.makeText(this@MusicActivity, "Please grant all permissions!", Toast.LENGTH_SHORT).show()
+
                 }
                 return
             }

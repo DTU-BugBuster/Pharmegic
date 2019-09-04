@@ -18,9 +18,12 @@ package com.example.android.pharmegic.PocketYoga.linechart;
 
 import android.os.Handler;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.android.pharmegic.R;
 
@@ -28,8 +31,7 @@ import com.example.android.pharmegic.R;
 public class CardController {
 
 
-	private final ImageButton mPlayBtn;
-
+	private ImageButton asan1, asan2, asan3, asan4, asan5;
 	private final ImageButton mUpdateBtn;
 
 	private final Runnable unlockAction = new Runnable() {
@@ -66,17 +68,20 @@ public class CardController {
 		super();
 
 		RelativeLayout toolbar = (RelativeLayout) card.findViewById(R.id.chart_toolbar);
-		mPlayBtn = (ImageButton) toolbar.findViewById(R.id.play);
+
 		mUpdateBtn = (ImageButton) toolbar.findViewById(R.id.update);
+		asan1 = toolbar.findViewById(R.id.asan1);
+		asan2 = toolbar.findViewById(R.id.asan2);
+		asan3 = toolbar.findViewById(R.id.asan3);
+		asan4 = toolbar.findViewById(R.id.asan4);
+		asan5 = toolbar.findViewById(R.id.asan5);
+		asan1.setOnClickListener(v -> Log.d("Asan1", "Logged"));
+		asan2.setOnClickListener(v -> Log.d("Asan2", "Logged"));
+		asan3.setOnClickListener(v -> Log.d("Asan3", "Logged"));
+		asan4.setOnClickListener(v -> Log.d("Asan4", "Logged"));
+		asan5.setOnClickListener(v -> Log.d("Asan5", "Logged"));
 
-		mPlayBtn.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-
-				dismiss(showAction);
-			}
-		});
 
 		mUpdateBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -117,14 +122,12 @@ public class CardController {
 
 	private void lock() {
 
-		mPlayBtn.setEnabled(false);
 		mUpdateBtn.setEnabled(false);
 	}
 
 
 	private void unlock() {
 
-		mPlayBtn.setEnabled(true);
 		mUpdateBtn.setEnabled(true);
 	}
 }

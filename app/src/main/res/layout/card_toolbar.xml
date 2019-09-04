@@ -1,23 +1,326 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <ImageButton
-        android:id="@+id/play"
-        android:layout_width="@dimen/card_toolbar_btn"
-        android:layout_height="@dimen/card_toolbar_btn"
-        android:layout_marginRight="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/ic_play_toolbar"
-        android:background="?attr/selectableItemBackgroundBorderless"/>
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <ImageButton
         android:id="@+id/update"
         android:layout_width="@dimen/card_toolbar_btn"
         android:layout_height="@dimen/card_toolbar_btn"
-        android:layout_toLeftOf="@+id/play"
-        android:layout_toStartOf="@+id/play"
+        android:layout_alignParentEnd="true"
         android:src="@drawable/ic_refresh"
         android:background="?attr/selectableItemBackgroundBorderless"/>
+    <ImageButton
+        android:id="@+id/asan1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/update"
+        android:layout_toStartOf="@+id/update"
+        android:src="@drawable/star_asan"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+    <ImageButton
+        android:id="@+id/asan2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/asan1"
+        android:layout_toStartOf="@+id/asan1"
+        android:src="@drawable/half_moon_pose"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+    <ImageButton
+        android:id="@+id/asan3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/asan2"
+        android:layout_toStartOf="@+id/asan2"
+        android:src="@drawable/extended_hand_big_toe_pose"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+    <ImageButton
+        android:id="@+id/asan4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/asan3"
+        android:layout_toStartOf="@+id/asan3"
+        android:src="@drawable/warrior_pose"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+    <ImageButton
+        android:id="@+id/asan5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@+id/asan4"
+        android:layout_toStartOf="@+id/asan4"
+        android:src="@drawable/vrikshasana"
+        android:scaleType="fitXY"
+        android:layout_marginEnd="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <!--<GridLayout-->
+        <!--android:layout_marginVertical="25dp"-->
+        <!--android:id="@+id/mainGrid"-->
+        <!--android:columnCount="1"-->
+        <!--android:rowCount="1"-->
+        <!--android:alignmentMode="alignMargins"-->
+        <!--android:columnOrderPreserved="false"-->
+        <!--android:layout_weight="8"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="14dp"-->
+        <!--&gt;-->
+
+        <!--&lt;!&ndash; Row 1 &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Column 1 &ndash;&gt;-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/asan1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--app:cardElevation="8dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_gravity="center_horizontal|center_vertical"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/me_time"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:text="Me"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!-- Column 2 -->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/asan2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--app:cardElevation="8dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_gravity="center_horizontal|center_vertical"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/family_time"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:text="Family"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+
+        <!--&lt;!&ndash; Row 2 &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Column 1 &ndash;&gt;-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/asan3"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--app:cardElevation="8dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_gravity="center_horizontal|center_vertical"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/lovely_time"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:text="Lovely"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--&lt;!&ndash; Column 2 &ndash;&gt;-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/asan4"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--app:cardElevation="8dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_gravity="center_horizontal|center_vertical"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/team_time"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:text="Team"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+
+        <!--&lt;!&ndash; Row 2 &ndash;&gt;-->
+
+        <!--&lt;!&ndash; Column 1 &ndash;&gt;-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/asan5"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--app:cardElevation="8dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_gravity="center_horizontal|center_vertical"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/friends"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:text="Friends"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+        <!--&lt;!&ndash; Column 2 &ndash;&gt;-->
+        <!--<android.support.v7.widget.CardView-->
+            <!--android:id="@+id/asan6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_columnWeight="1"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--android:layout_marginBottom="16dp"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:layout_marginRight="16dp"-->
+            <!--app:cardElevation="8dp"-->
+            <!--app:cardCornerRadius="8dp"-->
+            <!--&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_gravity="center_horizontal|center_vertical"-->
+                <!--android:layout_margin="16dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<ImageView-->
+                    <!--android:src="@drawable/calendar"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+                <!--<TextView-->
+                    <!--android:text="Calendars"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textSize="18sp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</android.support.v7.widget.CardView>-->
+
+    <!--</GridLayout>-->
+
+
 </RelativeLayout>
